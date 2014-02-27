@@ -6,6 +6,20 @@
        <LastUpdatedTime>2013-07-11T17:51:42-07:00</LastUpdatedTime>
     </MetaData>
     <TxnDate>2013-07-11</TxnDate>
+    <Line>
+       <Amount>8656.25</Amount>
+       <LinkedTxn>
+           <TxnId>762</TxnId>
+           <TxnType>Invoice</TxnType>
+       </LinkedTxn>
+    </Line>
+    <Line>
+        <Amount>2824.03</Amount>
+        <LinkedTxn>
+            <TxnId>763</TxnId>
+            <TxnType>Invoice</TxnType>
+        </LinkedTxn>
+    </Line>
     <PrivateNote>Payment smoke test</PrivateNote>
     <CustomerRef>25342</CustomerRef>
     <DepositToAccountRef>4</DepositToAccountRef>

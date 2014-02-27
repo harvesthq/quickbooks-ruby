@@ -12,7 +12,12 @@ describe "Quickbooks::Model::Payment" do
     payment.txn_date.should eq(Date.new(2013, 7, 11))
     payment.private_note.should eq("Payment smoke test")
     payment.txn_status.should be_nil
-    payment.line_items.size.should == 0
+    payment.line_items.first.amount.should == 8656.25
+    payment.line_items.first.linked_transaction.txn_id.should == "762"
+    payment.line_items.first.linked_transaction.txn_type.should == "Invoice"
+    payment.line_items.last.amount.should == 2824.03
+    payment.line_items.last.linked_transaction.txn_id.should == "763"
+    payment.line_items.last.linked_transaction.txn_type.should == "Invoice"
     payment.customer_ref.value.should eq("25342")
     payment.deposit_to_account_ref.value.should eq("4")
     payment.total.should eq(40.0)
